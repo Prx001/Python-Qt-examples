@@ -1,0 +1,43 @@
+<RCC>
+  <qresource prefix="/resources">
+    <file>resources/Close.png</file>
+    <file>resources/Username_label.png</file>
+    <file>resources/Password_label.png</file>
+    <file>resources/Apple.png</file>
+    <file>resources/Apple_clicked.png</file>
+    <file>resources/Apple_hovered.png</file>
+    <file>resources/Checkbox_checked_hovered.png</file>
+    <file>resources/Checkbox_checked.png</file>
+    <file>resources/Checkbox_label_checked.png</file>
+    <file>resources/Checkbox_label_hovered.png</file>
+    <file>resources/Checkbox_label.png</file>
+    <file>resources/Checkbox_unchecked_hovered.png</file>
+    <file>resources/Checkbox_unchecked.png</file>
+    <file>resources/Close_hovered.png</file>
+    <file>resources/Facebook.png</file>
+    <file>resources/Facebook_clicked.png</file>
+    <file>resources/Facebook_hovered.png</file>
+    <file>resources/Google.png</file>
+    <file>resources/Google_clicked.png</file>
+    <file>resources/Google_hovered.png</file>
+    <file>resources/Help.png</file>
+    <file>resources/Help_hovered.png</file>
+    <file>resources/Help2.png</file>
+    <file>resources/Label_1.png</file>
+    <file>resources/Label_1_hovered.png</file>
+    <file>resources/Label_2.png</file>
+    <file>resources/Label_2_hovered.png</file>
+    <file>resources/Login_button_clicked.png</file>
+    <file>resources/Login_button_disabled.png</file>
+    <file>resources/Login_button_hovered.png</file>
+    <file>resources/Login_button.png</file>
+    <file>resources/Minimize.png</file>
+    <file>resources/Minimize_hovered.png</file>
+    <file>resources/Riot_Games.png</file>
+    <file>resources/Sign_in.png</file>
+    <file>resources/VALORANT.png</file>
+    <file>resources/version_label.png</file>
+    <file>resources/version_label_hovered.png</file>
+    <file>resources/Wallpaper.png</file>
+  </qresource>
+</RCC>
