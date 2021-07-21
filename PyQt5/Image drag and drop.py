@@ -10,6 +10,10 @@ class Form(QMainWindow):
 		self.resize(400, 400)
 		self.setWindowTitle("Image viewer")
 		self.image = QLabel("Drop image here")
+		# self.image.setStyleSheet("""
+		# QLabel{
+		# 	border: 2px dashed gray;
+		# }""")
 		self.image.setAlignment(Qt.AlignCenter)
 		self.setCentralWidget(self.image)
 		self.image.setAcceptDrops(True)
@@ -28,7 +32,6 @@ class Form(QMainWindow):
 		else:
 			event.ignore()
 	def dropEvent(self, event):
-		print(event.mimeData().urls())
 		self.image.setPixmap(QPixmap(event.mimeData().urls()[0].toLocalFile()))
 app = QApplication(sys.argv)
 form = Form()
