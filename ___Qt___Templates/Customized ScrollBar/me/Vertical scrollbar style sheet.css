@@ -1,0 +1,50 @@
+QScrollBar:vertical {
+	border: none;
+	margin: 15px 0 15px 0;
+	width: 15px;
+}
+QScrollBar::handle:vertical {
+	width: 16px;
+	border-radius: 7px;
+	border: none;
+	background-color: rgb(172, 172, 172);
+}
+QScrollBar::handle:vertical:hover {
+	background-color: rgb(144, 144, 144);
+}
+QScrollBar::handle:vertical:pressed {
+	background-color: rgb(98, 98, 98);
+}
+QScrollBar::sub-page:vertical, QScrollBar::add-page:vertical {
+	background-color: none;
+}
+QScrollBar::sub-line:vertical {
+	height: 15px;
+	background-color: rgb(172, 172, 172);
+	border: none;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	subcontrol-position: top;
+	subcontrol-origin: margin;
+}
+QScrollBar::sub-line:vertical:hover {
+	background-color: rgb(144, 144, 144);
+}
+QScrollBar::sub-line:vertical:pressed {
+	background-color: rgb(98, 98, 98);
+}
+QScrollBar::add-line:vertical {
+	height: 15px;
+	background-color: rgb(172, 172, 172);
+	border: none;
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+	subcontrol-position: bottom;
+	subcontrol-origin: margin;	
+}
+QScrollBar:add-line:vertical:hover {
+	background-color: rgb(144, 144, 144);
+}
+QScrollBar:add-line:vertical:pressed {
+	background-color: rgb(98, 98, 98);
+}
