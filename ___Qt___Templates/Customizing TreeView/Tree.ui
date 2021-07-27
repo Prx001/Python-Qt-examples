@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTreeWidget" name="treeWidget">
+     <property name="styleSheet">
+      <string notr="true">QTreeView {
+    show-decoration-selected: 1;
+}
+
+QTreeWidget::item {
+     border: 1px solid #d9d9d9;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+QTreeWidget::item:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #e7effd, stop: 1 #cbdaf1);
+    border: 1px solid #bfcde4;
+}
+
+QTreeWidget::item:selected {
+    border: 1px solid #567dbc;
+}
+
+QTreeWidget::item:selected:active{
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #6ea1f1, stop: 1 #567dbc);
+}
+
+QTreeWidget::item:selected:!active {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #6b9be8, stop: 1 #577fbf);
+}
+
+
+
+
+QTreeView::branch {
+        background: palette(base);
+}
+
+QTreeView::branch:has-siblings:!adjoins-item {
+        background: cyan;
+}
+
+QTreeView::branch:has-siblings:adjoins-item {
+        background: red;
+}
+
+QTreeView::branch:!has-children:!has-siblings:adjoins-item {
+        background: blue;
+}
+
+QTreeView::branch:closed:has-children:has-siblings {
+        background: pink;
+}
+
+QTreeView::branch:has-children:!has-siblings:closed {
+        background: gray;
+}
+
+QTreeView::branch:open:has-children:has-siblings {
+        background: magenta;
+}
+
+QTreeView::branch:open:has-children:!has-siblings {
+        background: green;
+}</string>
+     </property>
+     <column>
+      <property name="text">
+       <string>Name</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Size</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Type</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Date modified</string>
+      </property>
+     </column>
+     <item>
+      <property name="text">
+       <string>(C:) Local Disk</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string>Drive</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Shit on C</string>
+       </property>
+      </item>
+     </item>
+     <item>
+      <property name="text">
+       <string>(D:) New Volume</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string>Drive</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Shit on D</string>
+       </property>
+      </item>
+     </item>
+     <item>
+      <property name="text">
+       <string>(E:) New Volume</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string>Drive</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Shit on E</string>
+       </property>
+      </item>
+     </item>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

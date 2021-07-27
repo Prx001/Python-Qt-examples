@@ -44,12 +44,12 @@ class PyToggle(QCheckBox):
         rect = QRect(0, 0, self.width(), self.height())
         if not self.isChecked():
             painter.setBrush(QColor(self._bg_color))
-            painter.drawRoundedRect(0, 0, rect.width(), self.height(), self.height()/2, self.height()/2)
+            painter.drawRoundedRect(0, 0, self.width(), self.height(), self.height()/2, self.height()/2)
             painter.setBrush(QColor(self._circle_color))
             painter.drawEllipse(self._circle_position, 3, 22, 22)
         elif self.isChecked():
             painter.setBrush(QColor(self._active_color))
-            painter.drawRoundedRect(0, 0, rect.width(), self.height(), self.height()/2, self.height()/2)
+            painter.drawRoundedRect(0, 0, self.width(), self.height(), self.height()/2, self.height()/2)
             painter.setBrush(QColor(self._circle_color))
             painter.drawEllipse(self._circle_position, 3, 22, 22)
         painter.end()
