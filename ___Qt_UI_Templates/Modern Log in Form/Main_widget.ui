@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <stylestrategy>PreferAntialias</stylestrategy>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#Form {
+	background-color: qlineargradient(spread:pad, x1:0.422726, y1:0.449, x2:1, y2:1, stop:0 rgba(56, 56, 56, 255), stop:1 rgba(103, 103, 103, 255));
+}
+QLabel {
+	color: rgb(255, 255, 255);
+}
+QLineEdit {
+	color: rgb(0, 0, 0);
+	background-color: rgb(222, 222, 222);
+	border: 2px solid;
+	border-radius: 6px;
+	border-color: rgba(0, 0, 0, 0);
+	padding-left: 10px;
+	padding-right: 10px
+}
+QLineEdit:hover {
+	background-color: rgb(200, 200, 200);
+	border-color: rgb(116, 116, 116)
+}
+QLineEdit:focus {
+	background-color: rgb(240, 240, 240);
+	border-color: rgb(138, 21, 211)
+}
+QPushButton {
+	color: rgb(255, 255, 255);
+	background-color: rgb(0, 116, 228);
+	border: none;
+	border-radius: 6px;
+}
+QPushButton:hover {
+	background-color: rgb(40, 138, 232);
+}
+QPushButton:pressed {
+	background-color: rgb(61, 149, 234);
+}</string>
+  </property>
+  <widget class="QLabel" name="welcome_label">
+   <property name="geometry">
+    <rect>
+     <x>135</x>
+     <y>90</y>
+     <width>127</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <pointsize>16</pointsize>
+     <stylestrategy>PreferAntialias</stylestrategy>
+    </font>
+   </property>
+   <property name="text">
+    <string>Welcome!</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="username_line_edit">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>217</y>
+     <width>300</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <stylestrategy>PreferAntialias</stylestrategy>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="password_line_edit">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>271</y>
+     <width>300</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <stylestrategy>PreferAntialias</stylestrategy>
+    </font>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="password_label">
+   <property name="geometry">
+    <rect>
+     <x>62</x>
+     <y>282</y>
+     <width>71</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <pointsize>9</pointsize>
+     <stylestrategy>PreferAntialias</stylestrategy>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(120, 120, 120)</string>
+   </property>
+   <property name="text">
+    <string>Password</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="username_label">
+   <property name="geometry">
+    <rect>
+     <x>62</x>
+     <y>228</y>
+     <width>75</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <pointsize>9</pointsize>
+     <stylestrategy>PreferAntialias</stylestrategy>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(120, 120, 120)</string>
+   </property>
+   <property name="text">
+    <string>Username</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="log_in_button">
+   <property name="geometry">
+    <rect>
+     <x>131</x>
+     <y>390</y>
+     <width>137</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Log in</string>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>username_line_edit</tabstop>
+  <tabstop>password_line_edit</tabstop>
+  <tabstop>log_in_button</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
