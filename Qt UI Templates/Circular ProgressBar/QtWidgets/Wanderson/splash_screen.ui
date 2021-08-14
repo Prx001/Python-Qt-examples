@@ -41,7 +41,7 @@
      <property name="styleSheet">
       <string notr="true">QFrame {
 	border-radius: 150px;
-	background-color: qconicalgradient(cx:0.5, cy:0.5, angle:90, stop:0.749 rgba(255, 0, 127, 0), stop:0.750 rgba(85, 170, 255, 255));
+	background-color: qconicalgradient(cx:0.5, cy:0.5, angle:90, stop:0.999 rgba(255, 0, 127, 0), stop:1.0 rgba(85, 170, 255, 255));
 }</string>
      </property>
      <property name="frameShape">
@@ -63,7 +63,7 @@
      <property name="styleSheet">
       <string notr="true">QFrame {
 	border-radius: 150px;
-	background-color: rgba(77, 77, 127, 120);
+	background-color: rgba(77, 77, 127, 0);
 }</string>
      </property>
      <property name="frameShape">
@@ -95,7 +95,7 @@
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>30</x>
