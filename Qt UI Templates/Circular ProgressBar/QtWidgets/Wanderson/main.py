@@ -16,7 +16,7 @@ class SplashScreen(QMainWindow):
 	def init_ui(self):
 		self.setWindowFlag(Qt.FramelessWindowHint)
 		self.setAttribute(Qt.WA_TranslucentBackground)
-		self.timer.start(1, self)
+		self.timer.start(10, self)
 		self.show()
 	def timerEvent(self, time_event):
 		if self.times > 0.001:

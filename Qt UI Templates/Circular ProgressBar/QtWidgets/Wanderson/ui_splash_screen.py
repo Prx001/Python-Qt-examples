@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'splash_screenuuZZib.ui'
+## Form generated from reading UI file 'splash_screenRWwema.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.0
 ##
@@ -42,7 +42,7 @@ class Ui_SplashScreen(object):
         self.circularBg.setGeometry(QRect(10, 10, 300, 300))
         self.circularBg.setStyleSheet(u"QFrame {\n"
 "	border-radius: 150px;\n"
-"	background-color: rgba(77, 77, 127, 0);\n"
+"	background-color: rgba(77, 77, 127, 120);\n"
 "}")
         self.circularBg.setFrameShape(QFrame.NoFrame)
         self.circularBg.setFrameShadow(QFrame.Raised)
