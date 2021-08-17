@@ -1,5 +1,7 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTextEdit, QAction, QFileDialog
+from pathlib import Path
+user = str(Path.home())
 class Form(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -17,7 +19,7 @@ class Form(QMainWindow):
         fileMenu.addAction(openAct)
         self.show()
     def showDialog(self):
-        fileName = QFileDialog.getOpenFileName(self, "Select file to open", "C:\\Users\\Parsa\\Desktop", "*.txt")
+        fileName = QFileDialog.getOpenFileName(self, "Select file to open", f"{user}\\Desktop", "*.txt")
         if fileName[0]:
             with open(fileName[0], "r") as file:
                 content = file.read()

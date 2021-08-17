@@ -12,6 +12,7 @@ class Form(QWidget):
 		combo = QComboBox(self)
 		combo.addItems(["Item 1", "Item 2", "Item 3", "Item 4"])
 		combo.move(50, 50)
+		combo.setEditable(True)
 		combo.activated[str].connect(self.onActivate)
 		self.show()
 	def onActivate(self, item):

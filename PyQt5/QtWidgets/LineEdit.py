@@ -7,10 +7,11 @@ class Form(QWidget):
 	def initUI(self):
 		self.setGeometry(450, 250, 280, 170)
 		self.setWindowTitle("QLineEdit")
-		self.label = QLabel(self)
+		self.label = QLabel("I'm a label!", self)
 		lineEdit = QLineEdit(self)
 		self.label.move(60, 40)
 		lineEdit.move(60, 100)
+		lineEdit.setPlaceholderText("Type something")
 		lineEdit.textChanged.connect(self.onChange)
 		self.show()
 	def onChange(self, newText):
