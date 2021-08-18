@@ -1,7 +1,6 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QAction, QDesktopWidget
 from PyQt5.QtGui import QIcon
-from PyQt5.QtCore import Qt, QPoint
 class Form(QMainWindow):
 	def __init__(self):
 		super().__init__()
@@ -10,7 +9,6 @@ class Form(QMainWindow):
 		self.setWindowTitle("MenuBar")
 		self.resize(300, 300)
 		self.moveCenter()
-		self.setWindowFlag(Qt.FramelessWindowHint)
 		QButton = QPushButton("Quit", self)
 		QButton.resize(QButton.sizeHint())
 		QButton.move(10, 250)
@@ -31,12 +29,6 @@ class Form(QMainWindow):
 		cp = QDesktopWidget().availableGeometry().center()
 		qr.moveCenter(cp)
 		self.move(qr.topLeft())
-	def mousePressEvent(self, event):
-		self.oldPos = event.globalPos()
-	def mouseMoveEvent(self, event):
-		delta = QPoint(event.globalPos() - self.oldPos)
-		self.move(self.x() + delta.x(), self.y() + delta.y())
-		self.oldPos = event.globalPos()
 app = QApplication(sys.argv)
 form = Form()
 sys.exit(app.exec_())
