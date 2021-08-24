@@ -1,0 +1,21 @@
+QScrollBar:vertical {
+	width: 10px;
+	background: rgba(0, 0, 0, 0);
+	border: none;
+	margin: 0 0 0 0;
+}
+QScrollBar::sub-line:vertical, QScrollBar::add-line:vertical, QScrollBar::sub-page:vertical, QScrollBar::add-page:vetical {
+	background: none;
+	border: none
+}
+QScrollBar::handle:vertical {
+	background-color: rgb(110, 133, 211);
+	border: none;
+}
+QScrollBar::handle:vertical:hover {
+	background-color: rgb(125, 151, 239);
+}
+QScrollBar::handle:vertical:pressed {
+	background-color: rgb(88, 106, 234);
+	background-color: rgb(81, 110, 203);
+}
