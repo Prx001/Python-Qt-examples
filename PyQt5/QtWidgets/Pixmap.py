@@ -8,10 +8,11 @@ class Form(QMainWindow):
     def initUI(self):
         self.setGeometry(450, 250, 300, 150)
         self.setWindowTitle("Pixmap")
-        pixmap = QPixmap("icon.ico")
+        pixmap = QPixmap("icon.png")
         label = QLabel(self)
+        label.setScaledContents(True)
         label.setPixmap(pixmap)
-        self.setCentralWidget(label)
+        label.resize(100, 100)
         self.show()
 app = QApplication(sys.argv)
 form = Form()
