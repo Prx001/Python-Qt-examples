@@ -1,0 +1,1 @@
+https://www.programcreek.com/python/example/108079/PyQt5.QtWidgets.QTextBrowser
