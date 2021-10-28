@@ -13,7 +13,7 @@ class Form(QMainWindow):
 		item00 = QTreeWidgetItem(item0, ["Nested shit one", "Nested poop one"])
 		item10 = QTreeWidgetItem(item1, ["Nested shit two", "Nested poop two"])
 		self.context_menu = QMenu(self)
-		self.action = self.context_menu.addAction("Shit")
+		self.action = self.context_menu.addAction("")
 		self.tw.setContextMenuPolicy(Qt.CustomContextMenu)
 		self.tw.customContextMenuRequested.connect(self.show_context_menu)
 		self.setCentralWidget(self.tw)
