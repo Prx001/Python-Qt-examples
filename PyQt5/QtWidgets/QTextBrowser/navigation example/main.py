@@ -14,7 +14,7 @@ class Form(QMainWindow, Ui_MainWindow):
 		style = self.style()
 		self.backward_action = QAction("")
 		self.backward_action.setDisabled(True)
-		self.backward_action.setIcon(QIcon(style.standardIcon(QStyle.SP_ArrowBack).pixmap(24, 24)))
+		self.backward_action.setIcon(style.standardIcon(QStyle.SP_ArrowBack))
 		self.backward_action.triggered.connect(self.text_browser.backward)
 		self.forward_action = QAction("")
 		self.forward_action.setDisabled(True)

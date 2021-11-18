@@ -14,18 +14,20 @@ class Form(QMainWindow):
 		# QLabel{
 		# 	border: 2px dashed gray;
 		# }""")
+		self.image.setScaledContents(True)
 		self.image.setAlignment(Qt.AlignCenter)
 		self.setCentralWidget(self.image)
 		self.image.setAcceptDrops(True)
 		self.setAcceptDrops(True)
 		self.show()
-	def paintEvent(self, pain_event):
+	def paintEvent(self, paint_event):
 		painter = QPainter()
 		painter.begin(self)
+		painter.setRenderHint(QPainter.HighQualityAntialiasing)
 		painter.setPen(QPen(Qt.gray, 4, Qt.DashLine))
 		painter.drawRect(10, 10, self.width() - 20, self.height() - 20)
 		painter.end()
-		super().paintEvent(pain_event)
+		super().paintEvent(paint_event)
 	def dragEnterEvent(self, event):
 		if event.mimeData().hasImage:
 			event.accept()
