@@ -1,10 +1,14 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QTableView, QTableWidget
+
+from PyQt5.QtWidgets import QApplication, QMainWindow, QTableView
 from PyQt5.QtGui import QStandardItemModel, QStandardItem
+
+
 class Form(QMainWindow):
 	def __init__(self):
 		super().__init__()
 		self.initUI()
+
 	def initUI(self):
 		self.resize(455, 160)
 		self.setWindowTitle("QStandardItemModel")
@@ -24,6 +28,8 @@ class Form(QMainWindow):
 		self.table.setModel(self.model)
 		self.setCentralWidget(self.table)
 		self.show()
+
+
 app = QApplication(sys.argv)
 form = Form()
 sys.exit(app.exec_())

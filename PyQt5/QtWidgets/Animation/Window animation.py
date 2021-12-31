@@ -1,11 +1,15 @@
 import sys
+
 from PyQt5.QtCore import QSize, QPropertyAnimation
 from PyQt5.QtWidgets import QApplication, QMainWindow, QAction, QDesktopWidget
 from PyQt5.QtGui import QIcon
+
+
 class Form(QMainWindow):
 	def __init__(self):
 		super().__init__()
 		self.initUI()
+
 	def initUI(self):
 		self.resize(400, 320)
 		self.move_to_center()
@@ -16,6 +20,7 @@ class Form(QMainWindow):
 		toolbar.addAction(animateAct)
 		self.wide = False
 		self.show()
+
 	def animate(self):
 		print(self.size())
 		print("Animating it....")
@@ -29,11 +34,14 @@ class Form(QMainWindow):
 			self.anim.setEndValue(QSize(640, 560))
 			self.wide = True
 		self.anim.start()
+
 	def move_to_center(self):
 		qr = self.frameGeometry()
 		cp = QDesktopWidget().availableGeometry().center()
 		qr.moveCenter(cp)
 		self.move(qr.topLeft())
+
+
 app = QApplication(sys.argv)
 form = Form()
 sys.exit(app.exec_())

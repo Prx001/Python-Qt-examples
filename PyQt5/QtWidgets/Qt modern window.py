@@ -7,14 +7,17 @@ mw = qtmodern.windows.ModernWindow(win)
 mw.show()
 """
 import sys
+
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QToolTip
 from PyQt5.QtGui import QFont
-import qtmodern.styles
 import qtmodern.windows
+
+
 class Form(QWidget):
 	def __init__(self):
 		super().__init__()
 		self.initUI()
+
 	def initUI(self):
 		QToolTip.setFont(QFont("SansSerif", 10))
 		self.setToolTip("This is the main form")
@@ -28,6 +31,8 @@ class Form(QWidget):
 		self.setMaximumWidth(450)
 		self.setFixedHeight(150)
 		self.show()
+
+
 app = QApplication(sys.argv)
 win = Form()
 qtmodern.styles.dark(app)

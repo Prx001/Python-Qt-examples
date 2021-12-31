@@ -1,13 +1,14 @@
-from win32com.shell import shell, shellcon
+import sys
+
+from win32com.shell import shell
 from PIL import Image, ImageQt
 import win32api
 import win32con
 import win32ui
 import win32gui
-import sys
 from PyQt5.QtCore import QSize
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTreeWidget, QTreeWidgetItem
-from PyQt5.QtGui import QIcon, QPixmap
+from PyQt5.QtGui import QIcon
 
 
 def get_icon(PATH, size):
@@ -42,10 +43,13 @@ def get_icon(PATH, size):
 	if size == "small":
 		img = img.resize((16, 16), Image.ANTIALIAS)
 	return img
+
+
 class Form(QMainWindow):
 	def __init__(self):
 		super().__init__()
 		self.initUI()
+
 	def initUI(self):
 		self.setGeometry(450, 250, 300, 300)
 		tw = QTreeWidget(self)
@@ -58,6 +62,8 @@ class Form(QMainWindow):
 		item0.setIcon(0, icon)
 		self.setCentralWidget(tw)
 		self.show()
+
+
 app = QApplication(sys.argv)
 form = Form()
 sys.exit(app.exec_())

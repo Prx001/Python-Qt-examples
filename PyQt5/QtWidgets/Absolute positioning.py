@@ -1,9 +1,13 @@
 import sys
+
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel
+
+
 class Form(QWidget):
 	def __init__(self):
 		super().__init__()
 		self.initUI()
+
 	def initUI(self):
 		self.setGeometry(500, 300, 350, 250)
 		self.setWindowTitle("Absolute")
@@ -18,6 +22,8 @@ class Form(QWidget):
 		label5 = QLabel("3-It takes so much time and effort.", self)
 		label5.move(10, 80)
 		self.show()
+
+
 app = QApplication(sys.argv)
 form = Form()
 sys.exit(app.exec_())

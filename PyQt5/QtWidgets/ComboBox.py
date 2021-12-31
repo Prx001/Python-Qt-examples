@@ -1,9 +1,13 @@
 import sys
+
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QComboBox
+
+
 class Form(QWidget):
 	def __init__(self):
 		super().__init__()
 		self.initUI()
+
 	def initUI(self):
 		self.setGeometry(450, 250, 300, 200)
 		self.setWindowTitle("QComboBox")
@@ -15,9 +19,12 @@ class Form(QWidget):
 		combo.setEditable(True)
 		combo.activated[str].connect(self.onActivate)
 		self.show()
+
 	def onActivate(self, item):
 		self.label.setText(item)
 		self.label.adjustSize()
+
+
 app = QApplication(sys.argv)
 form = Form()
 sys.exit(app.exec_())

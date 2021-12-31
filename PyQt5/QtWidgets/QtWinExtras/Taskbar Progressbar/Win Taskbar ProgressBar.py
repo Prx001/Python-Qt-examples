@@ -1,8 +1,8 @@
 import sys
 
-from PySide2.QtWidgets import QApplication, QWidget
-from PySide2.QtGui import QIcon
-from PySide2.QtWinExtras import QWinTaskbarButton
+from PyQt5.QtWidgets import QApplication, QWidget
+from PyQt5.QtGui import QIcon
+from PyQt5.QtWinExtras import QWinTaskbarButton
 
 
 class Form(QWidget):
@@ -15,7 +15,7 @@ class Form(QWidget):
 		self.setWindowTitle("Windows Taskbar ProgressBar")
 		self.show()
 		taskbar_button = QWinTaskbarButton(self)
-		taskbar_button.setWindow(self.windowHandle())
+		taskbar_button.setWindow(self.windowHandle())  # You must the window AFTER the window show event
 		taskbar_progress = taskbar_button.progress()
 		taskbar_progress.setValue(60)
 		taskbar_button.setOverlayIcon(QIcon("badge-1.ico"))

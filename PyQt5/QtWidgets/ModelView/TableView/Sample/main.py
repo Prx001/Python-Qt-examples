@@ -1,22 +1,31 @@
 import sys
+
 from PyQt5.QtCore import Qt, QAbstractTableModel
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTableView
+
+
 class TableModel(QAbstractTableModel):
 	def __init__(self, data):
 		super().__init__()
 		self.inner_data = data
+
 	def data(self, index, role):
 		if role == Qt.DisplayRole:
 			return self.inner_data[index.row()][index.column()]
+
 	def rowCount(self, index):
 		return len(self.inner_data)
+
 	def columnCount(self, index):
 		return len(self.inner_data[0])
+
+
 class Form(QMainWindow):
 	def __init__(self):
 		super().__init__()
 
 		self.init_ui()
+
 	def init_ui(self):
 		self.resize(500, 300)
 		self.setWindowTitle("Table Model")
@@ -32,6 +41,8 @@ class Form(QMainWindow):
 		table.setModel(model)
 		self.setCentralWidget(table)
 		self.show()
+
+
 app = QApplication(sys.argv)
 form = Form()
 sys.exit(app.exec_())

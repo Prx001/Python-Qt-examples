@@ -1,10 +1,14 @@
 import sys
+
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTreeWidget, QTreeWidgetItem, QMenu
+
+
 class Form(QMainWindow):
 	def __init__(self):
 		super().__init__()
 		self.initUI()
+
 	def initUI(self):
 		self.tw = QTreeWidget()
 		self.tw.setHeaderLabels(["Shits", "Poops"])
@@ -18,9 +22,11 @@ class Form(QMainWindow):
 		self.tw.customContextMenuRequested.connect(self.show_context_menu)
 		self.setCentralWidget(self.tw)
 		self.show()
+
 	def show_context_menu(self, pos):
 		self.action.setText(self.tw.indexAt(pos).data())
 		self.context_menu.exec_(self.mapToGlobal(pos))
+
 
 app = QApplication(sys.argv)
 form = Form()

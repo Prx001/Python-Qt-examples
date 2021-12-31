@@ -1,9 +1,14 @@
 import sys
-from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QLabel, QLineEdit, QInputDialog, QFontDialog, QColorDialog, QVBoxLayout, QHBoxLayout, QDesktopWidget)
+
+from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QLabel, QLineEdit, QInputDialog, QFontDialog,
+                             QColorDialog, QVBoxLayout, QHBoxLayout, QDesktopWidget)
+
+
 class Form(QWidget):
 	def __init__(self):
 		super().__init__()
 		self.initUI()
+
 	def initUI(self):
 		self.resize(300, 240)
 		self.moveToCenter()
@@ -33,23 +38,29 @@ class Form(QWidget):
 		vbox.addLayout(hbox2)
 		self.setLayout(vbox)
 		self.show()
+
 	def moveToCenter(self):
 		qr = self.frameGeometry()
 		cp = QDesktopWidget().availableGeometry().center()
 		qr.moveCenter(cp)
 		self.move(qr.topLeft())
+
 	def showEditDialog(self):
 		text, ok = QInputDialog.getText(self, "Edit text", "Enter new text")
 		if ok:
 			self.lineEdit.setText(str(text))
+
 	def showFontDialog(self):
 		font, ok = QFontDialog.getFont()
 		if ok:
 			self.lineEdit.setFont(font)
+
 	def showColorDialog(self):
 		color = QColorDialog.getColor()
 		if color.isValid():
 			self.lineEdit.setStyleSheet("color: %s" % color.name())
+
+
 app = QApplication(sys.argv)
 form = Form()
 sys.exit(app.exec_())

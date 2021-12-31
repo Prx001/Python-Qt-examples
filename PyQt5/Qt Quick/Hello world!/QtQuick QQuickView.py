@@ -9,6 +9,6 @@ from PyQt5.QtGui import QGuiApplication
 if __name__ == "__main__":
 	app = QGuiApplication(sys.argv)
 	view = QQuickView()
-	view.setSource(QUrl.fromLocalFile("Sample_QML.qml"))
+	view.setSource(QUrl("Sample_QML.qml"))
 	view.show()
 	sys.exit(app.exec_())

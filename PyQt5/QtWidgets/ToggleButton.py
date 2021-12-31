@@ -1,10 +1,14 @@
 import sys
+
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QFrame
 from PyQt5.QtGui import QColor
+
+
 class Form(QWidget):
 	def __init__(self):
 		super().__init__()
 		self.initUI()
+
 	def initUI(self):
 		self.setGeometry(450, 250, 280, 170)
 		self.setWindowTitle("ToggleButtons")
@@ -28,6 +32,7 @@ class Form(QWidget):
 		self.frame.setGeometry(150, 20, 100, 100)
 		self.frame.setStyleSheet("background-color: %s" % self.color.name())
 		self.show()
+
 	def modifyColor(self, switch):
 		if switch:
 			colorValue = 255
@@ -41,6 +46,8 @@ class Form(QWidget):
 		elif object.text() == "Blue":
 			self.color.setBlue(colorValue)
 		self.frame.setStyleSheet("background-color: %s" % self.color.name())
+
+
 app = QApplication(sys.argv)
 form = Form()
 sys.exit(app.exec_())

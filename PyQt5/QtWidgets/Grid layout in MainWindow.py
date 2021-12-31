@@ -1,9 +1,13 @@
 import sys
+
 from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow, QPushButton, QGridLayout, QAction
+
+
 class Widget(QWidget):
 	def __init__(self):
 		super().__init__()
 		self.initUI()
+
 	def initUI(self):
 		grid = QGridLayout()
 		button0 = QPushButton("0")
@@ -16,10 +20,13 @@ class Widget(QWidget):
 		grid.addWidget(button2, 0, 2, 1, 1)
 		grid.addWidget(button3, 0, 4, 1, 1)
 		self.setLayout(grid)
+
+
 class Form(QMainWindow):
 	def __init__(self):
 		super().__init__()
 		self.initUI()
+
 	def initUI(self):
 		self.setGeometry(500, 300, 300, 250)
 		widget = Widget()
@@ -30,6 +37,8 @@ class Form(QMainWindow):
 		options = menubar.addMenu("Options")
 		options.addAction(exitAct)
 		self.show()
+
+
 app = QApplication(sys.argv)
 form = Form()
 sys.exit(app.exec_())

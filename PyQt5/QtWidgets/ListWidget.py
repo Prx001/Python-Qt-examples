@@ -1,9 +1,13 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QListWidget, QListWidgetItem
+
+from PyQt5.QtWidgets import QApplication, QMainWindow, QListWidget
+
+
 class Form(QMainWindow):
 	def __init__(self):
 		super().__init__()
 		self.initUI()
+
 	def initUI(self):
 		self.resize(400, 300)
 		self.setWindowTitle("QListWidget")
@@ -17,6 +21,8 @@ class Form(QMainWindow):
 		# list.addItems(["Item 1", "Item 2", "Item 3"])
 		self.setCentralWidget(list)
 		self.show()
+
+
 app = QApplication(sys.argv)
 form = Form()
 sys.exit(app.exec_())

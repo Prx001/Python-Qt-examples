@@ -1,14 +1,14 @@
 <RCC>
-  <qresource prefix="/resources">
-    <file>../htmls/pages/chotmal-1.html</file>
-    <file>../htmls/pages/chotmal-2.html</file>
-    <file>../htmls/pages/chotmal-3.html</file>
-    <file>../htmls/pages/chotmal-4.html</file>
-    <file>../htmls/pages/chotmal-5.html</file>
-    <file>../htmls/pages/chotmal-6.html</file>
-    <file>../htmls/pages/chotmal-7.html</file>
-    <file>../htmls/pages/chotmal-8.html</file>
-    <file>../htmls/pages/chotmal-9.html</file>
-    <file>../htmls/pages/chotmal-10.html</file>
-  </qresource>
+    <qresource prefix="/resources">
+        <file>../htmls/pages/chotmal-1.html</file>
+        <file>../htmls/pages/chotmal-2.html</file>
+        <file>../htmls/pages/chotmal-3.html</file>
+        <file>../htmls/pages/chotmal-4.html</file>
+        <file>../htmls/pages/chotmal-5.html</file>
+        <file>../htmls/pages/chotmal-6.html</file>
+        <file>../htmls/pages/chotmal-7.html</file>
+        <file>../htmls/pages/chotmal-8.html</file>
+        <file>../htmls/pages/chotmal-9.html</file>
+        <file>../htmls/pages/chotmal-10.html</file>
+    </qresource>
 </RCC>

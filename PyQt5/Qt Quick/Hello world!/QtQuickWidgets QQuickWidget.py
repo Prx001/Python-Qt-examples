@@ -9,5 +9,4 @@ if __name__ == "__main__":
 	app = QApplication(sys.argv)
 	view = QQuickWidget()
 	view.setSource(QUrl("Sample_QML.qml"))
-	view.show()
 	sys.exit(app.exec_())

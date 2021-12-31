@@ -1,10 +1,14 @@
 import sys
+
 from PyQt5.QtCore import QSize, QPropertyAnimation
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton
+
+
 class Form(QWidget):
 	def __init__(self):
 		super().__init__()
 		self.initUI()
+
 	def initUI(self):
 		self.setGeometry(500, 300, 300, 240)
 		self.setWindowTitle("Animation")
@@ -13,6 +17,7 @@ class Form(QWidget):
 		self.button.move(20, 200)
 		self.button.clicked.connect(self.animate)
 		self.show()
+
 	def animate(self):
 		print(self.button.size())
 		print("Animating it....")
@@ -21,6 +26,8 @@ class Form(QWidget):
 		self.animation.setStartValue(QSize(75, 23))
 		self.animation.setEndValue(QSize(120, 23))
 		self.animation.start()
+
+
 app = QApplication(sys.argv)
 form = Form()
 sys.exit(app.exec_())

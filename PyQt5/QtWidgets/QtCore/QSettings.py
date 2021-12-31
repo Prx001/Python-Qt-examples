@@ -1,5 +1,6 @@
 # https://www.mfitzp.com/forum/t/pyqt5-qsettings-how-to-use-qsettings/509
 from PyQt5.QtCore import QSettings
+
 settings = QSettings('MyApplication', 'MyApplicationDesktop')
 print(settings.fileName())
 settings.setValue('customer_code', 8889)

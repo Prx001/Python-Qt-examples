@@ -1,6 +1,8 @@
 import sys
+
 from PyQt5.QtWidgets import QApplication, QMainWindow, QAction, QStyle
 from PyQt5.QtGui import QIcon
+
 from UI_Form import Ui_MainWindow
 
 
@@ -23,8 +25,10 @@ class Form(QMainWindow, Ui_MainWindow):
 		self.tool_bar.addAction(self.backward_action)
 		self.tool_bar.addAction(self.forward_action)
 		self.tool_bar.addAction(self.forward_action)
-		self.text_browser.backwardAvailable.connect(lambda: self.backward_action.setEnabled(True) if self.text_browser.isBackwardAvailable() else self.backward_action.setDisabled(True))
-		self.text_browser.forwardAvailable.connect(lambda: self.forward_action.setEnabled(True) if self.text_browser.isForwardAvailable() else self.forward_action.setDisabled(True))
+		self.text_browser.backwardAvailable.connect(lambda: self.backward_action.setEnabled(
+			True) if self.text_browser.isBackwardAvailable() else self.backward_action.setDisabled(True))
+		self.text_browser.forwardAvailable.connect(lambda: self.forward_action.setEnabled(
+			True) if self.text_browser.isForwardAvailable() else self.forward_action.setDisabled(True))
 		self.show()
 
 

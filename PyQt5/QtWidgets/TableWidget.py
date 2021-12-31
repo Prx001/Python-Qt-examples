@@ -1,9 +1,13 @@
 import sys
+
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTableWidget, QTableWidgetItem
+
+
 class Form(QMainWindow):
 	def __init__(self):
 		super().__init__()
 		self.initUI()
+
 	def initUI(self):
 		self.setGeometry(500, 300, 455, 160)
 		self.setWindowTitle("Form1")
@@ -31,6 +35,8 @@ class Form(QMainWindow):
 		table.setItem(2, 1, QTableWidgetItem("32"))
 		table.setItem(2, 2, QTableWidgetItem("33"))
 		self.show()
+
+
 app = QApplication(sys.argv)
 form = Form()
 sys.exit(app.exec_())

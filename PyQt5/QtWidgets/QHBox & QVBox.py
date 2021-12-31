@@ -1,9 +1,13 @@
 import sys
+
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QHBoxLayout, QVBoxLayout
+
+
 class Form(QWidget):
 	def __init__(self):
 		super().__init__()
 		self.initUI()
+
 	def initUI(self):
 		self.setGeometry(400, 200, 250, 100)
 		self.setWindowTitle("Nested QLayouts")
@@ -18,6 +22,8 @@ class Form(QWidget):
 		vbox.addLayout(hbox)
 		self.setLayout(vbox)
 		self.show()
+
+
 app = QApplication(sys.argv)
 form = Form()
 sys.exit(app.exec_())

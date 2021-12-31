@@ -1,19 +1,25 @@
 import sys
+
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QApplication, QWidget
 from PyQt5.QtGui import QPainter, QPen, QColor
+
+
 class Form(QWidget):
 	def __init__(self):
 		super().__init__()
 		self.initUI()
+
 	def initUI(self):
 		self.setGeometry(300, 300, 300, 300)
 		self.setWindowTitle("Pen styles")
 		self.show()
+
 	def paintEvent(self, event):
 		painter = QPainter()
 		painter.begin(self)
 		self.drawLines(painter)
+
 	def drawLines(self, painter):
 		pen = QPen(QColor(0, 0, 0), 3, Qt.SolidLine)
 		painter.setPen(pen)
@@ -34,6 +40,8 @@ class Form(QWidget):
 		pen.setDashPattern([1, 4, 7, 4])
 		painter.setPen(pen)
 		painter.drawLine(20, 240, 250, 240)
+
+
 app = QApplication(sys.argv)
 form = Form()
 sys.exit(app.exec_())

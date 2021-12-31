@@ -13,7 +13,7 @@ for row, text in enumerate(['Cell', 'Fish', 'Apple', 'Ananas', 'Mango']):
 # filter proxy model
 filter_proxy_model = QtCore.QSortFilterProxyModel()
 filter_proxy_model.setSourceModel(model)
-filter_proxy_model.setFilterKeyColumn(2) # third column
+filter_proxy_model.setFilterKeyColumn(2)  # third column
 
 # line edit for filtering
 layout = QtWidgets.QVBoxLayout(window)

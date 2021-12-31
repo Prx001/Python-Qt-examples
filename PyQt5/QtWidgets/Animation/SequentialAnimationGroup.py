@@ -1,10 +1,14 @@
 import sys
+
 from PyQt5.QtCore import QPoint, QPropertyAnimation, QSequentialAnimationGroup
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton
+
+
 class Form(QWidget):
 	def __init__(self):
 		super().__init__()
 		self.init_ui()
+
 	def init_ui(self):
 		self.resize(340, 300)
 		self.setWindowTitle("QSequentialAnimationGroup")
@@ -19,6 +23,7 @@ class Form(QWidget):
 		self.button3.resize(self.button3.sizeHint())
 		self.animations()
 		self.show()
+
 	def animations(self):
 		self.anim1 = QPropertyAnimation(self.button1, b"pos")
 		self.anim1.setDuration(500)
@@ -30,17 +35,16 @@ class Form(QWidget):
 		self.anim3.setDuration(500)
 		self.anim3.setEndValue(QPoint(220, 250))
 
-
 		self.anim_group = QSequentialAnimationGroup()
 		self.anim_group.addAnimation(self.anim1)
 		self.anim_group.addAnimation(self.anim2)
 		self.anim_group.addAnimation(self.anim3)
 
-
-
 		self.button1.clicked.connect(self.anim_group.start)
 		self.button2.clicked.connect(self.anim_group.start)
 		self.button3.clicked.connect(self.anim_group.start)
+
+
 app = QApplication(sys.argv)
 form = Form()
 sys.exit(app.exec_())

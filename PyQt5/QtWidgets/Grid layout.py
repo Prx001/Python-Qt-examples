@@ -1,9 +1,13 @@
 import sys
+
 from PyQt5.QtWidgets import QApplication, QWidget, QGridLayout, QLabel, QLineEdit, QTextEdit
+
+
 class Form(QWidget):
 	def __init__(self):
 		super().__init__()
 		self.initUI()
+
 	def initUI(self):
 		self.move(450, 250)
 		self.setWindowTitle("QGridLayout")
@@ -23,6 +27,8 @@ class Form(QWidget):
 		grid.addWidget(commentEdit, 3, 1, 6, 1)
 		self.setLayout(grid)
 		self.show()
+
+
 app = QApplication(sys.argv)
 form = Form()
 sys.exit(app.exec_())

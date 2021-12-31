@@ -1,6 +1,9 @@
 import sys
+
 from PyQt5.QtCore import QObject, pyqtSignal
 from PyQt5.QtWidgets import QApplication, QWidget, QGridLayout, QLabel, QLineEdit, QTextEdit, QDesktopWidget
+
+
 class ResizeResponseListener(QObject):
 	resizedThin = pyqtSignal()
 	resizedThiner = pyqtSignal()
@@ -14,10 +17,13 @@ class ResizeResponseListener(QObject):
 	resizedTall = pyqtSignal()
 	resizedTaller = pyqtSignal()
 	resizedTallest = pyqtSignal()
+
+
 class Form(QWidget):
 	def __init__(self):
 		super().__init__()
 		self.initUI()
+
 	def initUI(self):
 		self.firstWidth = self.frameGeometry().width() + 1
 		self.firstHeight = self.frameGeometry().height() + 1
@@ -58,11 +64,13 @@ class Form(QWidget):
 		self.listener.resizedTaller.connect(self.tallerResponse)
 		self.listener.resizedTallest.connect(self.tallestResponse)
 		self.show()
+
 	def moveToCenter(self):
 		qr = self.frameGeometry()
 		cp = QDesktopWidget().availableGeometry().center()
 		qr.moveCenter(cp)
 		self.move(qr.topLeft())
+
 	def resizeEvent(self, new_size):
 		resizedWidth = new_size.size().width()
 		resizedHeight = new_size.size().height()
@@ -94,30 +102,44 @@ class Form(QWidget):
 			self.listener.resizedTaller.emit()
 		elif resizedHeight == self.firstHeight + 180:
 			self.listener.resizedTaller.emit()
+
 	def thinResponse(self):
 		self.grid.setSpacing(15)
+
 	def thinerResponse(self):
 		self.grid.setSpacing(9)
+
 	def thinestResponse(self):
 		self.grid.setSpacing(3)
+
 	def fatResponse(self):
 		self.grid.setSpacing(27)
+
 	def faterResponse(self):
 		self.grid.setSpacing(33)
+
 	def fatestResponse(self):
 		self.grid.setSpacing(39)
+
 	def shortResponse(self):
 		self.grid.setSpacing(15)
+
 	def shorterResponse(self):
 		self.grid.setSpacing(9)
+
 	def shortestResponse(self):
 		self.grid.setSpacing(3)
+
 	def tallResponse(self):
 		self.grid.setSpacing(27)
+
 	def tallerResponse(self):
 		self.grid.setSpacing(33)
+
 	def tallestResponse(self):
 		self.grid.setSpacing(39)
+
+
 app = QApplication(sys.argv)
 form = Form()
 sys.exit(app.exec_())

@@ -1,10 +1,14 @@
 import sys
+
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QApplication, QWidget, QFrame, QSplitter, QHBoxLayout
+
+
 class Form(QWidget):
 	def __init__(self):
 		super().__init__()
 		self.initUI()
+
 	def initUI(self):
 		self.setGeometry(450, 250, 300, 200)
 		self.setWindowTitle("QSplitter")
@@ -24,6 +28,8 @@ class Form(QWidget):
 		hbox.addWidget(splitter2)
 		self.setLayout(hbox)
 		self.show()
+
+
 app = QApplication(sys.argv)
 form = Form()
 sys.exit(app.exec_())

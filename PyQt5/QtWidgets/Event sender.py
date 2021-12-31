@@ -1,9 +1,13 @@
 import sys
+
 from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton
+
+
 class Form(QMainWindow):
 	def __init__(self):
 		super().__init__()
 		self.initUI()
+
 	def initUI(self):
 		self.setGeometry(450, 250, 250, 200)
 		self.setWindowTitle("Event sender")
@@ -17,9 +21,12 @@ class Form(QMainWindow):
 		button2.clicked.connect(self.buttonClicked)
 		self.statusBar().showMessage("Ready")
 		self.show()
+
 	def buttonClicked(self):
 		sender = self.sender()
 		self.statusBar().showMessage(sender.text() + " was pressed")
+
+
 app = QApplication(sys.argv)
 form = Form()
 sys.exit(app.exec_())
