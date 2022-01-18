@@ -15,7 +15,8 @@ class Form(QMainWindow):
 		self.QStatusBar.showMessage("Ready")
 		QMenuBar = self.menuBar()
 		viewMenu = QMenuBar.addMenu("View")
-		viewStatAct = QAction("View statusbar", self, checkable=True)
+		viewStatAct = QAction("View statusbar", self)
+		viewStatAct.setCheckable(True)
 		viewStatAct.setChecked(True)  # Set the default mode
 		viewStatAct.triggered.connect(self.toggleStatusBar)
 		viewStatAct.setStatusTip("Toggle statusbar")
