@@ -14,7 +14,7 @@ class Form(QMainWindow):
 		self.setWindowTitle("Qt icons")
 		button = QPushButton("Button")
 		style = button.style()
-		icon = style.standardIcon(QStyle.SP_ComputerIcon)
+		icon = style.standardIcon(QStyle.SP_TitleBarMenuButton)
 		button.setIcon(icon)
 		button.setIconSize(QSize(64, 64))
 		self.setCentralWidget(button)
